@@ -10,7 +10,7 @@ env:
   AZURE_APP_PLAN: actions-ttt-deployment
   AZURE_LOCATION: '"Australia East"'
   ###############################################
-  ### Replace <username> with GitHub username ###
+  ### Replace <username> with GitHub usernames ###
   ###############################################
   AZURE_WEBAPP_NAME: nish112-ttt-app
 
