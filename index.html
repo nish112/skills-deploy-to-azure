@@ -11,6 +11,24 @@
   </head>
   <body>
     <div id="app">
+      <div id="staff">
+        <button
+          id="staffIcon"
+          type="button"
+          aria-expanded="false"
+          aria-controls="staffMenu"
+          aria-label="Staff profile"
+          title="Staff profile"
+        >
+          <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M9 11a4 4 0 1 0-4-4 4 4 0 0 0 4 4zm0 2c-3.3 0-6 1.8-6 4v2h12v-2c0-2.2-2.7-4-6-4zm8-2a3 3 0 1 0-3-3 3 3 0 0 0 3 3zm0 2c-.7 0-1.4.1-2 .3 1.8.9 3 2.4 3 4.1V19h5v-2c0-2.2-2.7-4-6-4z"
+            />
+          </svg>
+        </button>
+        <div id="staffMenu" role="menu"></div>
+      </div>
       <div>
         <h2 id="turn">It's <span id="player"></span>'s turn!</h2>
         <h2 id="win">

@@ -5,6 +5,7 @@ module.exports = {
     "main.js": [
       path.resolve(__dirname, "index.js"),
       path.resolve(__dirname, "game.js"),
+      path.resolve(__dirname, "employee.js"),
     ],
   },
   output: {

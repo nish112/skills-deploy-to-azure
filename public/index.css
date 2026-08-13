@@ -1,3 +1,13 @@
+:root {
+  --school-color: #8b0000;
+  --school-color-light: #b22222;
+  --school-color-contrast: #ffffff;
+}
+
+body {
+  color: var(--school-color);
+}
+
 #game {
   display: flex;
 }
@@ -14,11 +24,12 @@
   text-align: center;
 
   font-size: 4em;
-  border: thin solid black;
+  border: thin solid var(--school-color);
 }
 
 #tictactoe td:hover {
-  background: #cccccc;
+  background: var(--school-color-light);
+  color: var(--school-color-contrast);
 }
 
 #tictactoe tr {
@@ -40,14 +51,78 @@
 }
 
 #score th {
-  border-bottom: thin solid black;
+  border-bottom: thin solid var(--school-color);
 }
 
 #score h2 {
   margin-top: 0;
 }
 
+#newGame {
+  background: var(--school-color);
+  color: var(--school-color-contrast);
+  border: thin solid var(--school-color);
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
 #app {
   margin: auto;
   width: 60%;
+  position: relative;
+}
+
+#staff {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
+}
+
+#staffIcon {
+  background: var(--school-color);
+  color: var(--school-color-contrast);
+  border: none;
+  border-radius: 50%;
+  padding: 6px;
+  line-height: 0;
+  cursor: pointer;
+}
+
+#staffIcon:hover,
+#staffIcon[aria-expanded="true"] {
+  background: var(--school-color-light);
+}
+
+#staffMenu {
+  display: none;
+  position: absolute;
+  right: 0;
+  min-width: 220px;
+  padding: 10px 15px;
+  text-align: left;
+  background: var(--school-color-contrast);
+  border: thin solid var(--school-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#staff:hover #staffMenu,
+#staffIcon[aria-expanded="true"] + #staffMenu {
+  display: block;
+}
+
+#staffMenu h3 {
+  margin: 0 0 5px;
+  color: var(--school-color);
+}
+
+#staffMenu dt {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  color: var(--school-color-light);
+}
+
+#staffMenu dd {
+  margin: 0 0 8px;
+  color: #333333;
 }

@@ -1,4 +1,5 @@
 import Game from "./game.js";
+import { initStaffMenu } from "./employee.js";
 
 let p1, p2;
 while (!p1) {
@@ -12,6 +13,7 @@ while (!p2 && p1 !== p2) {
 }
 
 window.onload = () => {
+  initStaffMenu(document);
   document.getElementById("p1Name").innerText = p1;
   document.getElementById("p2Name").innerText = p2;
   let score1 = 0;
