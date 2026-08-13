@@ -4,10 +4,6 @@
   --school-color-contrast: #ffffff;
 }
 
-body {
-  color: var(--school-color);
-}
-
 #game {
   display: flex;
 }
@@ -67,6 +63,7 @@ body {
 }
 
 #app {
+  color: var(--school-color);
   margin: auto;
   width: 60%;
   position: relative;
