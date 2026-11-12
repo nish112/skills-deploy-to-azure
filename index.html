@@ -4,56 +4,132 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>TicTacToe</title>
-
+    <meta
+      name="description"
+      content="View your Northstar Academy student profile and account details."
+    />
+    <title>My Student Profile | Northstar Academy</title>
     <link href="public/index.css" type="text/css" rel="stylesheet" />
-    <script src="public/main.js"></script>
   </head>
   <body>
-    <div id="app">
-      <div>
-        <h2 id="turn">It's <span id="player"></span>'s turn!</h2>
-        <h2 id="win">
-          <span id="winner"></span> wins!
-          <button id="newGame">Play again?</button>
-        </h2>
-      </div>
-      <div id="game">
-        <table id="tictactoe">
-          <tr>
-            <td class="0 0"></td>
-            <td class="0 1"></td>
-            <td class="0 2"></td>
-          </tr>
-          <tr>
-            <td class="1 0"></td>
-            <td class="1 1"></td>
-            <td class="1 2"></td>
-          </tr>
-          <tr>
-            <td class="2 0"></td>
-            <td class="2 1"></td>
-            <td class="2 2"></td>
-          </tr>
-        </table>
-        <div id="score">
-          <h2>Score</h2>
-          <table>
-            <thead>
-              <tr>
-                <th id="p1Name"></th>
-                <th id="p2Name"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td id="p1Score">0</td>
-                <td id="p2Score">0</td>
-              </tr>
-            </tbody>
-          </table>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Northstar Academy home">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <span>Northstar <strong>Academy</strong></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#profile" aria-current="page">My profile</a>
+        <a href="#help">Help center</a>
+      </nav>
+      <details class="profile-menu">
+        <summary aria-label="Open student account menu">
+          <span class="person-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <circle cx="12" cy="8" r="3.5"></circle>
+              <path d="M5.5 20c.5-3.6 2.8-5.5 6.5-5.5s6 1.9 6.5 5.5"></path>
+            </svg>
+          </span>
+          <span class="menu-name">Avery Johnson</span>
+          <span class="chevron" aria-hidden="true"></span>
+        </summary>
+        <section class="profile-popover" aria-label="Student account details">
+          <p class="popover-eyebrow">Student account</p>
+          <p class="popover-name">Avery Johnson</p>
+          <dl>
+            <div>
+              <dt>First name</dt>
+              <dd>Avery</dd>
+            </div>
+            <div>
+              <dt>Last name</dt>
+              <dd>Johnson</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:avery.johnson@students.northstar.edu">avery.johnson@students.northstar.edu</a></dd>
+            </div>
+            <div>
+              <dt>Student category</dt>
+              <dd>Undergraduate</dd>
+            </div>
+          </dl>
+        </section>
+      </details>
+    </header>
+
+    <main id="profile">
+      <div class="page-heading">
+        <div>
+          <p class="eyebrow">Student portal <span>/</span> My profile</p>
+          <h1>Your profile</h1>
+          <p class="intro">Keep your student details close and up to date.</p>
         </div>
+        <div class="term-badge"><span aria-hidden="true"></span> Fall 2026</div>
       </div>
-    </div>
+
+      <section class="profile-card" aria-labelledby="student-name">
+        <div class="profile-banner">
+          <div class="avatar" aria-hidden="true">AJ</div>
+          <div class="student-heading">
+            <p class="eyebrow">Student profile</p>
+            <h2 id="student-name">Avery Johnson</h2>
+            <p class="student-email">avery.johnson@students.northstar.edu</p>
+          </div>
+          <span class="status-badge"><span aria-hidden="true"></span> Active student</span>
+        </div>
+
+        <div class="profile-content">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">Your information</p>
+              <h3>Personal details</h3>
+            </div>
+            <span class="demo-label">Sample profile</span>
+          </div>
+          <dl class="details-grid">
+            <div class="detail-item">
+              <dt>First name</dt>
+              <dd>Avery</dd>
+            </div>
+            <div class="detail-item">
+              <dt>Last name</dt>
+              <dd>Johnson</dd>
+            </div>
+            <div class="detail-item">
+              <dt>Student email</dt>
+              <dd><a href="mailto:avery.johnson@students.northstar.edu">avery.johnson@students.northstar.edu</a></dd>
+            </div>
+            <div class="detail-item">
+              <dt>Student category</dt>
+              <dd>Undergraduate</dd>
+            </div>
+            <div class="detail-item">
+              <dt>Program</dt>
+              <dd>Environmental Science</dd>
+            </div>
+            <div class="detail-item">
+              <dt>Year of study</dt>
+              <dd>Year 2</dd>
+            </div>
+            <div class="detail-item">
+              <dt>Student ID</dt>
+              <dd>NS-204817</dd>
+            </div>
+            <div class="detail-item">
+              <dt>Campus</dt>
+              <dd>Riverside Campus</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <aside class="notice" aria-label="Profile information">
+        <span class="notice-icon" aria-hidden="true">i</span>
+        <p>This sample profile is for preview purposes. Contact Student Services to update your official details.</p>
+        <a href="#help">Contact Student Services <span aria-hidden="true">↗</span></a>
+      </aside>
+    </main>
+    <footer id="help">Northstar Academy <span>•</span> Student Services</footer>
   </body>
 </html>
